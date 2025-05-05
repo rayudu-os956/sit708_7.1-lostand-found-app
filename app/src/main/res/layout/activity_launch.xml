@@ -1,0 +1,22 @@
+<!-- app/src/main/res/layout/activity_launch.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="32dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btnCreate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create a New Advert"/>
+
+    <View android:layout_height="16dp" android:layout_width="match_parent"/>
+
+    <Button
+        android:id="@+id/btnShowAll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Show All Lost Found Items"/>
+</LinearLayout>
