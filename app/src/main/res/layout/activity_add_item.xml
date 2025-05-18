@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,105 +9,96 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <!-- Post type -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Post type:"/>
+        <!-- 1) Lost / Found toggle -->
         <RadioGroup
             android:id="@+id/rgType"
-            android:orientation="horizontal"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
             <RadioButton
                 android:id="@+id/rbLost"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Lost"
                 android:checked="true"/>
+
             <RadioButton
                 android:id="@+id/rbFound"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Found"/>
+                android:text="Found"
+                android:layout_marginStart="16dp"/>
         </RadioGroup>
 
-        <!-- Name -->
-        <TextView
-            android:layout_marginTop="12dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Name:"/>
+        <!-- 2) Name -->
         <EditText
             android:id="@+id/edtName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter name"/>
+            android:hint="Enter name"
+            android:inputType="textPersonName"
+            android:layout_marginBottom="12dp"/>
 
-        <!-- Phone -->
-        <TextView
-            android:layout_marginTop="12dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Phone:"/>
+        <!-- 3) Phone -->
         <EditText
             android:id="@+id/edtPhone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter phone"
-            android:inputType="phone"/>
+            android:inputType="phone"
+            android:layout_marginBottom="12dp"/>
 
-        <!-- Description -->
-        <TextView
-            android:layout_marginTop="12dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Description:"/>
+        <!-- 4) Description -->
         <EditText
             android:id="@+id/edtDesc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:minLines="3"
             android:hint="Enter description"
-            android:inputType="textMultiLine"/>
+            android:inputType="textMultiLine"
+            android:minLines="3"
+            android:gravity="top"
+            android:layout_marginBottom="12dp"/>
 
-        <!-- Date -->
-        <!-- Date -->
-        <TextView
-            android:layout_marginTop="12dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Date:"/>
-
+        <!-- 5) Date (opens DatePicker) -->
         <EditText
             android:id="@+id/edtDate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="YYYY-MM-DD"
-            android:clickable="true"
+            android:hint="Select date"
             android:focusable="false"
+            android:cursorVisible="false"
             android:inputType="none"
-            android:layout_marginTop="4dp"/>
-        <TextView
-            android:layout_marginTop="12dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Location:"/>
+            android:layout_marginBottom="16dp"/>
+
+        <!-- 6) Location (opens Autocomplete) -->
         <EditText
             android:id="@+id/edtLocation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter location"/>
+            android:hint="Search a place…"
+            android:drawableStart="@drawable/ic_baseline_search_24"
+            android:padding="12dp"
+            android:focusable="false"
+            android:cursorVisible="false"
+            android:inputType="none"
+            android:layout_marginBottom="12dp"/>
 
-        <!-- Save button -->
+        <!-- 7) Get current GPS location -->
         <Button
-            android:id="@+id/btnSave"
-            android:layout_marginTop="24dp"
+            android:id="@+id/btnCurrentLoc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="SAVE"
-            android:background="@drawable/button_bg"
-            android:padding="16dp"/>
+            android:text="Get Current Location"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- 8) Save -->
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SAVE"/>
 
     </LinearLayout>
 </ScrollView>

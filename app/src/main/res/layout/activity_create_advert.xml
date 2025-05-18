@@ -1,25 +1,26 @@
-<!-- app/src/main/res/layout/activity_create_advert.xml -->
+<?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:padding="16dp"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="16dp">
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
 
+        <!-- 1) Lost/Found toggle -->
         <RadioGroup
             android:id="@+id/rgType"
-            android:orientation="horizontal"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
             <RadioButton
                 android:id="@+id/rbLost"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Lost"
-                android:checked="true"/>
+                android:text="Lost"/>
             <RadioButton
                 android:id="@+id/rbFound"
                 android:layout_width="wrap_content"
@@ -27,45 +28,63 @@
                 android:text="Found"/>
         </RadioGroup>
 
+        <!-- 2) Name -->
         <EditText
             android:id="@+id/edtName"
-            android:hint="Name"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:hint="Enter name"/>
 
+        <!-- 3) Phone -->
         <EditText
             android:id="@+id/edtPhone"
-            android:hint="Phone"
-            android:inputType="phone"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:hint="Enter phone"
+            android:inputType="phone"/>
 
+        <!-- 4) Description -->
         <EditText
             android:id="@+id/edtDesc"
-            android:hint="Description"
-            android:inputType="textMultiLine"
-            android:minLines="3"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:hint="Enter description"/>
 
+        <!-- 5) Date (non-editable) -->
         <EditText
             android:id="@+id/edtDate"
-            android:hint="Date"
-            android:focusable="false"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:hint="Select date"
+            android:focusable="false"/>
 
+        <!-- 6) Place search (non-editable) -->
         <EditText
             android:id="@+id/edtLocation"
-            android:hint="Location"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:hint="Search a place…"
+            android:drawableStart="@drawable/ic_baseline_search_24"
+            android:padding="12dp"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:cursorVisible="false"
+            android:inputType="none"/>
 
+        <!-- 7) Current GPS -->
+        <Button
+            android:id="@+id/btnCurrentLoc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Get Current Location"
+            android:layout_marginTop="8dp"/>
+
+        <!-- 8) Save -->
         <Button
             android:id="@+id/btnSave"
-            android:text="Save"
-            android:layout_marginTop="24dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:text="SAVE"
+            android:layout_marginTop="24dp"/>
     </LinearLayout>
 </ScrollView>

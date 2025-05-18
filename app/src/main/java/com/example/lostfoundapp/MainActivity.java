@@ -18,5 +18,8 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btnShowAll).setOnClickListener(v ->
                 startActivity(new Intent(this, ListActivity.class))
         );
+        findViewById(R.id.btnShowMap).setOnClickListener(v ->
+                startActivity(new Intent(this, MapActivity.class))
+        );
     }
 }
